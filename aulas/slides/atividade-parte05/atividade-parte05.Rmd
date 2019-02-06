@@ -1,0 +1,210 @@
+---
+title: ME414 - Estatística para Experimentalistas
+subtitle: Uma moedinha, por favor!
+output:
+  ioslides_presentation:
+    widescreen: yes
+logo: ../logo-imecc.png
+---
+
+# Lei dos grandes números
+
+## Coleta de dados
+
+Vocês irão trabalhar em duplas:
+
+* Um colega irá lançar a moeda de 1 real.
+
+* O outro colega irá anotar 1 se sair a face indicando 1 da moeda e 0 caso contrário. 
+
+* Repitam 50 vezes.
+
+* Transfiram o resultado para a lousa.
+
+
+## Coleta de dados
+
+Na lousa:
+
+* Coluna 1: Total de lançamentos
+
+* Coluna 2: Total de faces 1
+
+* Coluna 3: Total acumulado de lançamentos
+
+* Coluna 4: Total acumulado de faces 1
+
+* Coluna 5: Proporção de faces 1
+
+
+
+## Análise descritiva
+
+Gráfico:
+
+Eixo x: total acumulado de lançamentos
+
+Eixo y: proporção de faces 1
+
+
+## Simulação computacional 
+
+```{r,echo=TRUE}
+repeticoes = 2500
+
+experimento = 1:repeticoes
+
+moedaresultado <- sample(c(0,1),size=repeticoes,replace=TRUE)
+
+propacum <- cumsum(moedaresultado)/experimento
+
+resultados <- data.frame(Col1 = 1, Col2= moedaresultado, 
+                         Col3= experimento,Col4=cumsum(moedaresultado))
+resultados$Col5=resultados$Col4/resultados$Col3
+```
+
+## Simulação computacional
+
+```{r,echo=TRUE,fig.align='center',fig.height=4}
+plot(y=resultados$Col5,x=resultados$Col3,type="l",xlab="Total de lançamentos", 
+     ylab="Proporção de face 1",ylim=c(0,1))
+abline(h=0.50,col="red")
+```
+
+
+## Simulação: lançamento de um dado 50 vezes {.smaller .build}
+
+> A cada simulação  (50 lançamentos e anotando o total de 1) obtemos um resultado diferente.
+
+> Se repetirmos as simulação 1000 vezes, temos uma idéia da distribuição de frequências da proporção de 1 em 50 lançamentos.
+
+<center>
+```{r, echo=FALSE, fig.height=3.5,message=FALSE,warning=FALSE}
+
+library(ggplot2)
+
+library(RColorBrewer)
+mycol <- brewer.pal(8, "Dark2")
+
+
+eixos <- theme(plot.title = element_text(size=16, face="bold"),
+               axis.text = element_text(size=14), 
+               axis.title = element_text(size=14),
+               legend.title = element_text(size=14, face="bold"), 
+               legend.text=element_text(size=14))
+
+
+B <- 1000
+lancamentos <- 50
+
+ prop1 <- matrix(NA, ncol=1, nrow=B)
+ for (i in 1:B){
+     x <- sample(c(0,1),size=lancamentos,replace=TRUE)
+     prop1[i] <- mean(x)
+ }
+
+
+ prop <- data.frame(prop1 = prop1)
+
+ggplot(prop, aes(x=prop1)) + 
+    geom_histogram(bins=11, fill=mycol[1], col="black", alpha=0.8) + 
+    geom_vline(xintercept = 0.5, col="red", linetype="dashed") + 
+    xlab("Proporção Acumulada de 1 em 50 lançamentos") + 
+    ylab("Frequência") + eixos
+
+
+```
+</center>
+
+Média: `r round(mean(prop1), 3)`. Mediana: `r round(median(prop1), 3)`. Desvio-padrão: `r round(sd(prop1),3)`.
+
+
+## Simulação: lançamento de um dado 100 vezes {.smaller .build}
+
+> A cada simulação  (100 lançamentos e anotando o total de 1) obtemos um resultado diferente.
+
+> Se repetirmos as simulação 1000 vezes, temos uma idéia da distribuição de frequências da proporção de 1 em 100 lançamentos.
+
+<center>
+```{r, echo=FALSE, fig.height=3.5,message=FALSE,warning=FALSE}
+
+
+B <- 1000
+lancamentos <- 100
+
+ prop1 <- matrix(NA, ncol=1, nrow=B)
+ for (i in 1:B){
+     x <- sample(c(0,1),size=lancamentos,replace=TRUE)
+     prop1[i] <- mean(x)
+ }
+
+
+prop <- data.frame(prop1 = prop1)
+
+ggplot(prop, aes(x=prop1)) + 
+    geom_histogram(bins=11, fill=mycol[1], col="black", alpha=0.8) + 
+    geom_vline(xintercept = 0.5, col="red", linetype="dashed") + 
+    xlab("Proporção Acumulada de 1 em 100 lançamentos") + 
+    ylab("Frequência") + eixos
+
+
+```
+</center>
+
+Média: `r round(mean(prop1), 3)`. Mediana: `r round(median(prop1), 3)`. Desvio-padrão: `r round(sd(prop1),3)`.
+
+
+## Simulação: lançamento de um dado 500 vezes {.smaller .build}
+
+> A cada simulação  (500 lançamentos e anotando o total de 1) obtemos um resultado diferente.
+
+> Se repetirmos as simulação 1000 vezes, temos uma idéia da distribuição de frequências da proporção de 1 em 500 lançamentos.
+
+<center>
+```{r, echo=FALSE, fig.height=3.5,message=FALSE,warning=FALSE}
+
+
+B <- 1000
+lancamentos <- 500
+
+ prop1 <- matrix(NA, ncol=1, nrow=B)
+ for (i in 1:B){
+     x <- sample(c(0,1),size=lancamentos,replace=TRUE)
+     prop1[i] <- mean(x)
+ }
+
+
+prop <- data.frame(prop1 = prop1)
+
+ggplot(prop, aes(x=prop1)) + 
+    geom_histogram(bins=11, fill=mycol[1], col="black", alpha=0.8) + 
+    geom_vline(xintercept = 0.5, col="red", linetype="dashed") + 
+    xlab("Proporção Acumulada de 1 em 500 lançamentos") + 
+    ylab("Frequência") + eixos
+
+
+```
+</center>
+
+Média: `r round(mean(prop1), 3)`. Mediana: `r round(median(prop1), 3)`. Desvio-padrão: `r round(sd(prop1),3)`.
+
+
+
+## Mais sobre o R e RStudio
+
+Online (sem instalar): [R-fiddle](http://www.r-fiddle.org/#/)
+
+
+Informações e tutoriais:
+
+[https://me111-unicamp.github.io/aulas/](https://me111-unicamp.github.io/aulas/)
+
+Livro de estatística básica usando R: [http://moderndive.com/index.html](http://moderndive.com/index.html)
+
+
+##
+
+Slides produzidos por:
+
+* Samara Kiihl
+
