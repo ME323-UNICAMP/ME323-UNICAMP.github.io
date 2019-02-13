@@ -16,10 +16,10 @@ permalink: /aulas/
 * Independência de Eventos
 * Teorema de Bayes 
 
-[Parte05](slides/parte05/parte05.html)
-[Parte06](slides/parte06/parte06.html)
-[Parte07](slides/parte07/parte07.html)
-[Parte08](slides/parte08/parte08.html)
+[Parte01](slides/parte01/parte01.html)
+[Parte02](slides/parte02/parte02.html)
+[Parte03](slides/parte03/parte03.html)
+[Parte04](slides/parte04/parte04.html)
 
 
 
@@ -77,15 +77,4 @@ permalink: /aulas/
 [Parte19](slides/parte19/parte19.html)
 [Parte20](slides/parte20/parte20.html)
 
-## Testes de Aderência, Independência e Homogeneidade
 
-[Parte21](slides/parte21/parte21.html)
-[Parte22](slides/parte22/parte22.html)
-
-## Regressão Linear Simples
-
-[Parte23](slides/parte23/parte23.html)
-
-## Análise de variância
-
-[Parte24](slides/parte24/parte24.html)
