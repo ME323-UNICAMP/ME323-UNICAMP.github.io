@@ -1,6 +1,6 @@
 ---
 title: "ME323 - Introdução aos Modelos Probabilísticos"
-subtitle: Parte 5
+subtitle: Parte 1
 output:
   ioslides_presentation:
     widescreen: yes
@@ -22,7 +22,7 @@ mycol <- brewer.pal(8, "Dark2")
 
 # Probabilidade
 
-## Introdução {.build}
+## Introdução
 
 Diariamente, tomamos decisões com relação a eventos incertos:
 
@@ -34,9 +34,10 @@ Diariamente, tomamos decisões com relação a eventos incertos:
 
 > Devo levar um guarda-chuva?
 
-> Devo me matricular numa disciplina eletiva com baixa taxa de aprovação?
 
-## Experimentos Aleatórios {.build}
+
+## Noções Básicas 
+
 **Experimento:** qualquer processo que produza uma observação ou resultado
 
 **Experimento Determinístico:** é aquele que, dada uma ação controlada, sabemos exatamente qual será o resultado obtido
@@ -53,8 +54,7 @@ Exemplo: lançamento de um dado de seis faces <br />
 Resultados possíveis: {1, 2, 3, 4, 5, 6} 
 
 
-
-## Probabilidade {.build}
+## Probabilidade 
 
 **Probabilidade**: medida de incerteza sobre certos eventos ou características de interesse.
 
@@ -72,7 +72,7 @@ Tais eventos, em geral, estão associados a **experimentos aleatórios**.
 > Ex: para aleatorizar dois tratamentos entre pacientes, pode-se lançar uma moeda. Se sair "cara" o paciente recebe a droga A, se sair "coroa", recebe a droga B.
 
 
-## Exemplo: Lançamento de dado {.build}
+## Exemplo: Lançamento de dado 
 
 <center><img src="figuras/ludo.jpg" width=200></center> 
 
@@ -425,7 +425,7 @@ Face  | 1  | 2  | 3  | 4  | 5 | 6 | Total
 Freq. Teórica | $\frac{1}{6}$ | $\frac{1}{6}$ | $\frac{1}{6}$ | $\frac{1}{6}$ | $\frac{1}{6}$ | $\frac{1}{6}$ | 1 
 
 
-## Espaço Amostral {.build}
+## Espaço Amostral 
 
 Para quantificar incerteza em fenômenos aleatórios usando probabilidades, precisamos primeiro especificar o conjunto de todos os  possíveis resultados do fenômeno em questão.
 
@@ -434,7 +434,7 @@ Para quantificar incerteza em fenômenos aleatórios usando probabilidades, prec
 > * **Probabilidade**: $P(\omega)$, para cada "ponto amostral"  $\omega$.
 
 
-## Exemplos de Espaço amostral {.build}
+## Exemplos de Espaço amostral 
 
 1. Se o fenômeno considerado é observar o sexo de uma criança ao nascer:
 <center>
@@ -451,7 +451,7 @@ $C=cara \quad \mbox{e} \quad X=coroa$
 
 
 
-## Exemplo: dois dados {.build .smaller}
+## Exemplo: dois dados {.smaller}
 
 Experimento é lançar dois dados (1 vermelho e 1 verde) e anotar os valores:
 
@@ -469,7 +469,7 @@ $$
 <center><img src="figuras/DoisDados.png" width=400></center>
 
 
-## Exemplo: testinho surpresa {.smaller .build}
+## Exemplo: testinho surpresa {.smaller}
 
 Testinho surpresa com três questões de múltipla escolha.
 
@@ -484,7 +484,7 @@ Testinho surpresa com três questões de múltipla escolha.
 <center><img src="figuras/popquiz.jpg" width=250></center>
 
 
-## Evento {.build}
+## Evento 
 
 **Evento** é um subconjunto do espaço amostral. Denotamos eventos pelas letras $A$, $B$, $C$, etc...
 
@@ -831,6 +831,39 @@ Dois eventos $A$ e $B$ são **complementares** se $A\cap B = \varnothing$ e $A\c
 >  * $B$ é denotado por $B=A^{C}$ (indicado na cor laranja).
 
 
+## Operações com eventos
+
+
+A **diferença** entre dois eventos é dada por:
+$$B\setminus A = B – A = B\cup A^c$$
+
+$A – B$ é o evento que $A$ acontece mas $B$ não.
+
+A **diferença simétrica** entre dois eventos é dada por:
+
+$$A\,\triangle\,B = (A\cap B^c)\cup (A^c\cap B) = (A \cup B) \setminus (A \cap B)$$
+
+Se $A\cap B = \varnothing$ , então $A\triangle B = A\cup B$.
+
+Se $A$ está contido em $B$, então $A\triangle B = B – A$.
+
+
+## Diagramas de Venn
+
+<center><img src="figuras/venn.png" width=700></center> 
+
+
+
+## Operações com eventos
+
+
+*  Se $A_1, A_2,\ldots, A_n$ é uma sequência finita ou infinita de eventos:
+     
+     $\bigcup_i^n A_i$ representa o evento que pelo menos um evento $A_i$ ocorre.
+     
+      $\bigcap_i^n A_i$ representa o evento que todos $A_i$'s ocorrem.
+ 
+
 ## Exemplo: Cartões de Crédito {.build}
 
 <img src="figuras/cartoes.jpg" width=300 style="float:right"> 
@@ -898,8 +931,10 @@ $$P(\bar{C})=\frac{164128}{577006}=0.284$$
 
 ## Leituras
 
-* [OpenIntro](https://www.openintro.org/stat/textbook.php): seção 2.1.
-* [Ross](http://www.sciencedirect.com/science/book/9780123743886): seções 4.1, 4.2, 4.3, 4.4.
+* [Ross](http://www.sciencedirect.com/science/book/9780123743886): capítulo 4
+* [OpenIntro](https://www.openintro.org/stat/textbook.php): seções 2.1. e 2.2
+* Magalhães: capítulo 2
+* Devore: capítulo 2
 
 ##
 
