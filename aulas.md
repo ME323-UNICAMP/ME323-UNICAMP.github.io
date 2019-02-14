@@ -5,7 +5,7 @@ permalink: /aulas/
 ---
 
 
-## Probabilidade
+## Introdução à Probabilidade
 
 * Definição
 * Espaço amostral
@@ -19,23 +19,24 @@ permalink: /aulas/
 [Parte01](slides/parte01/parte01.html)
 [Parte02](slides/parte02/parte02.html)
 [Parte03](slides/parte03/parte03.html)
-[Parte04](slides/parte04/parte04.html)
 
 
 
-## Variáveis aleatórias discretas
+## Variáveis Aleatórias Discretas
+
 * Distribuições de Probabilidade Discreta
 * Função Distribuição Acumulada (FDA)
 * Esperança e variância
-* Distribuições discretas: Uniforme, Bernoulli, Binomial, Geométrica, Hipergeométrica e Poisson
+* Distribuições discretas: Uniforme, Bernoulli, Binomial, Geométrica, Binomial Negativa, Hipergeométrica e Poisson
 * Aproximação da Binomial pela Poisson
 
-[Parte09](slides/parte09/parte09.html)
-[Parte10](slides/parte10/parte10.html)
-[Parte11](slides/parte11/parte11.html)
+[Parte04](slides/parte04/parte04.html)
+[Parte05](slides/parte05/parte05.html)
+[Parte06](slides/parte06/parte06.html)
 
 
-## Variáveis aleatórias contínuas
+## Variáveis Aleatórias Contínuas
+
 * Função densidade
 * Função de distribuição acumulada
 * Esperança e variância

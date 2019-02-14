@@ -34,23 +34,25 @@ Diariamente, tomamos decisões com relação a eventos incertos:
 
 > Devo levar um guarda-chuva?
 
+> Devo autorizar o empréstimo para determinado cliente?
+
 
 
 ## Noções Básicas 
 
-**Experimento:** qualquer processo que produza uma observação ou resultado
+**Experimento:** qualquer processo que produza uma observação ou resultado.
 
-**Experimento Determinístico:** é aquele que, dada uma ação controlada, sabemos exatamente qual será o resultado obtido
+**Experimento Determinístico:** é aquele que, dada uma ação controlada, sabemos exatamente qual será o resultado obtido.
 
 <img src="figuras/dice-six-every-face.jpg" width="80" style="float: left;"> 
-Exemplo: lançamento de um dado com todas as faces iguais a 6 <br />
+Exemplo: lançamento de um dado com todas as faces iguais a 6. <br />
 Único resultado possível? 6 
 
 <br />
 **Experimento Aleatório:** é aquele em que não se tem certeza sobre seus resultados, a priori. Mútiplos resultados podem ser obtidos a partir de uma única ação. Cada vez que se repete o experimento, o resultado pode ser diferente. 
 
 <img src="figuras/dicesixface0.jpeg" width="70" style="float:left;"> 
-Exemplo: lançamento de um dado de seis faces <br />
+Exemplo: lançamento de um dado de seis faces. <br />
 Resultados possíveis: {1, 2, 3, 4, 5, 6} 
 
 
@@ -60,16 +62,16 @@ Resultados possíveis: {1, 2, 3, 4, 5, 6}
 
 Tais eventos, em geral, estão associados a **experimentos aleatórios**.
 
-> **Aleatorização:**
+ **Aleatorização:**
 
-> * Jogar um dado.
+ * Jogar um dado.
 
-> * Jogar uma moeda.
+ * Jogar uma moeda.
 
-> * Girar uma roleta.
+ * Girar uma roleta.
 
 
-> Ex: para aleatorizar dois tratamentos entre pacientes, pode-se lançar uma moeda. Se sair "cara" o paciente recebe a droga A, se sair "coroa", recebe a droga B.
+Ex: para aleatorizar dois tratamentos entre pacientes, pode-se lançar uma moeda. Se sair "cara" o paciente recebe a droga A, se sair "coroa", recebe a droga B.
 
 
 ## Exemplo: Lançamento de dado 
@@ -441,7 +443,7 @@ Para quantificar incerteza em fenômenos aleatórios usando probabilidades, prec
 $\Omega=\{F, M\}$ <img src="figuras/meninomenina.png" width="150">
 </center>
 
- > 2. Se o experimento consiste em observar os resultados ao lançar uma moeda duas vezes:
+2. Se o experimento consiste em observar os resultados ao lançar uma moeda duas vezes:
 
 $$\Omega=\{\omega_{1},\omega_{2},\omega_{3},\omega_{4}\}$$
 
@@ -491,7 +493,7 @@ Testinho surpresa com três questões de múltipla escolha.
 > Dizemos que o evento $A$ ocorreu sempre que o resultado observado pertencer ao subconjunto de elementos do evento $A$.
 
 
-> * Experimento é lançar dois dados (1 vermelho e 1 verde) e anotar os valores:
+* Experimento é lançar dois dados (1 vermelho e 1 verde) e anotar os valores:
 <font size="4">
 $$
 \begin{align}
@@ -505,9 +507,9 @@ $$
 $$
 </font>
 
-> **Evento:** soma dos valores é igual a 3.
+**Evento:** soma dos valores é igual a 3.
 
-> $$A=\{ (1,2), (2,1)\}$$
+ $$A=\{ (1,2), (2,1)\}$$
 
 
 ## Exemplo: testinho surpresa {.build }
@@ -536,6 +538,26 @@ $$A=\{CCC, CCI, CIC, ICC\}$$
 
 > * A soma das probabilidades de cada elemento do espaço amostral deve ser igual a 1.
 
+## Axiomas
+
+* Considere um experimento aleatório com espaço amostral $\Omega$.
+
+* Para cada evento $A$ do espaço amostral $\Omega$, existem um número $P(A)$, chamado de probabilidade do evento $A$, que mede a chance de $A$ ocorrer.
+
+* **Axioma 1**: $0 \leq P(A) \leq 1$, para qualquer evento $A$ em $\Omega$.
+
+* **Axioma 2**: $P(\Omega)=1$.
+
+* **Axioma 3**: Seja $A_1, A_2,\ldots$ uma sequência de eventos disjuntos, isto é, $A_i\cap A_j=\varnothing$, $i\neq j$, então:
+$$P\left(\bigcup_{i=1}^{\infty}A_i \right)=\sum_{i=1}^{\infty}P(A_i)\,.$$
+
+## Axiomas
+
+* Axioma 1: reflete a noção intuitiva de que a chance de ocorrência de $A$ deve estar entre 0 e 1.
+
+* Axioma 2: o espaço amostral é por definição o evento que deve ocorrer quando o experimento é realizado ($\Omega$ contém todos os resultados possíveis). Desta forma, o axioma 2 diz que a probabilidade máxima possível a ser atribuída a $\Omega$ é 1.
+
+* Axioma 3: formaliza a idéia de que, se desejarmos que a probabilidade de ao menos um dos diversos eventos ocorra e que dois eventos quaisquer, dentre os diversos considerados, não ocorram simultaneamente, a chance de pelo menos um ocorrer será a soma das chances dos eventos individuais.
 
 
 ## Exemplo: lançar uma moeda duas vezes {.build}
@@ -553,6 +575,34 @@ Então $\omega_{1}=(C,C)$; $\omega_{2}=(C,X)$; $\omega_{3}=(X,C)$ e  $\omega_{4}
 
 > * Seja o evento $A=\{\omega_{1}, \omega_{4}\}=$ obter duas faces iguais:
 $$P(A)=P(\{\omega_{1},\omega_{4}\})=P(\omega_{1})+P(\omega_{4})=\frac{1}{4}+\frac{1}{4}=\frac{2}{4}=\frac{1}{2}$$
+
+
+<!-- ## Exemplo: teste de baterias -->
+
+<!-- Considere testar baterias que saem de uma linha de montagem, uma por uma, até ser encontrada uma que tenha uma voltagem dentro dos limites prescritos.  -->
+
+<!-- $S$ = bateria satisfatória; $F$ = bateria falha -->
+
+<!-- Os eventos possíveis, são: -->
+
+<!-- $E_1=\{S\}$, $E_2=\{F,S\}$, $E_3=\{F,F,S\}, E_4 = \{F,F,F,S\},\ldots$ -->
+
+<!-- Probabilidade de qualquer bateria ser satisfatória é $0.99$. -->
+
+<!-- Então, $P(E_1)=0.99$. Os eventos $E_i$'s são disjuntos e a união de todos eles formam uma partição de $\Omega$. -->
+
+<!-- ## Exemplo: teste de baterias -->
+
+
+<!-- Usando os axiomas 2 e 3: -->
+
+<!-- $$ \begin{aligned} -->
+<!-- 1 &=& P(\Omega) = P(\cup_{i=1}^{\infty} E_i) = \sum_{1=1}^{\infty}E_i\\ -->
+<!--     &=& 0.99 + (0.01)0.99 + (0.01)^20.99+(0.01)^30.99+\ldots -->
+<!-- \end{aligned} -->
+<!-- $$ -->
+
+
 
 
 ## Equiprobabilidade {.build}
