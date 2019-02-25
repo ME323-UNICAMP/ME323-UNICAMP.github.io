@@ -715,9 +715,11 @@ Portanto, se o jogador escolhe a porta 1 e:
 * Magalhães: capítulo 2
 * Devore: capítulo 2
 
-## 
+##
 
-<center><img src="figuras/bears.png" width=500></center>
+<center><img src="figuras/seashell.png" width=400></center>
+
+Fonte: [https://xkcd.com/1236/](https://xkcd.com/1236/)
 
 ##
 

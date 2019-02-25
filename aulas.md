@@ -27,7 +27,7 @@ permalink: /aulas/
 * Distribuições de Probabilidade Discreta
 * Função Distribuição Acumulada (FDA)
 * Esperança e variância
-* Distribuições discretas: Uniforme, Bernoulli, Binomial, Geométrica, Binomial Negativa, Hipergeométrica e Poisson
+* Distribuições discretas: Uniforme, Bernoulli, Binomial, Geométrica, Hipergeométrica, Binomial Negativa e Poisson
 * Aproximação da Binomial pela Poisson
 
 [Parte04](slides/parte04/parte04.html)
@@ -43,7 +43,7 @@ permalink: /aulas/
 * Distribuições contínuas: Uniforme, Exponencial, Normal
 * Aproximação da Binomial pela Normal
 
-[Parte12](slides/parte12/parte12.html)
+[Parte07](slides/parte07/parte07.html)
 [Parte13](slides/parte13/parte13.html)
 
 ## Distribuição Amostral

@@ -398,11 +398,11 @@ P\left(X \leq 2\right) &= P\left(X=1\right)+P\left(X=2\right) \\
 $$
 
 
-## Função de Distribuição Acumulada {.build}
+## Função de Distribuição Acumulada 
 
-> A função de distribuição acumulada (f.d.a.) de uma variável aleatória $X$ é definida por $$F\left(x\right)=P\left(X \leq x\right), \quad x\in\mathbb{R}$$ 
+A função de distribuição acumulada (f.d.a.) de uma variável aleatória $X$ é definida por $$F\left(x\right)=P\left(X \leq x\right), \quad x\in\mathbb{R}$$ 
 
-> Assim, se $X$ assume os valores em $\{x_{1},x_{2},...,x_{n}\}$, em que $x_1 < x_2 < \ldots < x_n$:
+Assim, se $X$ assume os valores em $\{x_{1},x_{2},...,x_{n}\}$, em que $x_1 < x_2 < \ldots < x_n$:
 
 $F\left(x_{1}\right)=P\left(X=x_{1}\right)$ 
 
@@ -411,6 +411,25 @@ $F\left(x_{2}\right)=P\left(X=x_{1}\right) + P\left(X=x_{2}\right)$
 $\vdots$ 
 
 $F\left(x_{n}\right)=P\left(X=x_{1}\right) + ... + P\left(X=x_{n}\right)$
+
+
+## Propriedades de uma f.d.a.
+
+1. $0\leq F(x) \leq 1$, para todo $x$
+
+2. $F$ é não decrescente, isto é, para $x_1<x_2$, $F(x_1) \leq F(x_2)$
+
+3. $F(-\infty) = 0$ e $F(+\infty)=1$
+
+4. $F$ é contínua à direita.
+
+5. $P(X>a)=1-F(a)$
+
+6. $P(X=a) = F(a)-F(a^-)$
+
+7. $P(a < X \leq b) = F(b)-F(a^-)$, $a<b$.
+
+em que a notação $b^-$ representa o maior valor possível de $X$ necessariamente inferior a $b$.
 
 
 ## Exemplo: Vacina {.build}
@@ -514,12 +533,12 @@ plotcdf(x, p, atcdf=TRUE)
 
 ## Esperança: variável aleatória discreta {.build}
 
-Seja $X$ uma v.a. discreta assumindo os valores $x_1,\ldots, x_n$.  
+Seja $X$ uma v.a. discreta assumindo valores possíveis no conjunto $D$.  
 
-A **esperança** (ou valor esperado) da variável $X$ é dada por:
-$$\mathbb E(X)=\sum_{i=1}^n x_i P(X=x_i)$$  
+A **esperança** (ou valor esperado/médio) da variável $X$ é dada por:
+$$\mathbb E(X)=\mu_X=\sum_{x\in D} x P(X=x)$$  
 
-> A esperança de $X$ é a média ponderada de todos os valores possíveis de $X$, onde o peso de cada valor é a probabilidade.
+> Interpretação: a esperança de $X$ é a média ponderada de todos os valores possíveis de $X$, onde o peso de cada valor é sua respectiva probabilidade.
 
 
 ## Esperança - Exemplos {.build}
@@ -816,11 +835,282 @@ $$
 > $$\mathbb E(C_2)=1244.16$$
 
 
+## Propriedades da Esperança
+
+* Se $Y=aX+b$, onde $a$ e $b$ são constantes, então:
+
+$$E(Y)=E(aX+b)=aE(X)+b$$
+
+*  Se $X_1, X_2, \ldots, X_n$ são variáveis aleatórias:
+
+$$E\left( \sum_{i=1}^n X_i\right) = \sum_{i=1}^n E(X_i)$$
+
+*  Seja $X$ uma v.a. discreta com valores possíveis no conjunto $D$, então, para qualquer função $g$:
+$$E[g(X)] = \sum_{x\in D} g(x) P(X=x)$$
+
+
+
+## Exemplo
+
+Seja $X$ uma v.a. tal que:
+
+$$ X=  \begin{cases} 
+1, & \mbox{com probabilidade } p \\
+0, & \mbox{com probabilidade } 1-p
+\end{cases}$$
+
+$$\mathbb E(X^2) = 1^2 \times p + 0^2 \times (1-p) = p$$
+
+
+
+## Exemplo: venda de computadores {.build}
+
+Uma loja de computadores comprou 3 computadores de certo modelo a $\$500$ para serem vendidos a $\$1000$ cada. O fabricante concordou em aceitar a devolução dos computadores não vendidos após 6 meses, por $\$200$ cada. Seja $X$ a quantidade de computadores vendidos. Supondo que: $P(X=0)=0.1$, $P(X=1)=0.2$, $P(X=2)=0.3$ e $P(X=3)=0.4$. Temos que o valor esperado de computadores vendidos é:
+
+$$E(X) = 0\times 0.1 + 1\times 0.2 + 2\times 0.3 + 3\times 0.4 = 2$$
+
+> Seja $g(X)$ o lucro associado à venda de $X$ computadores: receita menos o custo.
+$$g(X)=1000X + 200 (3-X) - 1500 = 800X-900$$
+
+$$E[g(X)] = E(800X+900) = 800 E(X) - 900 = 700$$
+
+
+
+# Variância
+
+## Variância de variável aleatória discreta {.build}
+
+* Vimos que a esperança nos dá a média ponderada de todos os resultados possíveis de uma v.a..
+
+> * No entanto, a esperança não descreve a dispersão dos dados. 
+
+> * Considere as seguintes v.a.'s:
+
+> $$U=0, \mbox{ com probabilidade 1}$$
+$$ V=  \begin{cases} 
+-1, & \mbox{com prob. 1/2} \\
+\;\; 1, & \mbox{com prob. 1/2}
+\end{cases}
+\quad \mbox{e} \quad W=  \begin{cases} 
+-10, & \mbox{com prob. 1/2} \\
+\;\; 10, & \mbox{com prob. 1/2}
+\end{cases}
+$$
+
+> $$\mathbb E(U)=\mathbb E(V)=\mathbb E(W)=0$$
+
+> Temos valores esperados idêndicos, mas dispersão é bem diferente para as três variáveis.
+
+
+## Variância de variável aleatória discreta {.build}
+
+Queremos uma medida para quantificar quão dispersos os valores da v.a. $X$ estão da sua esperança.
+  
+> **Definição:** Se $X$ é uma v.a. com esperança $\mathbb E(X)=\mu$, então a variância de $X$ é:
+>  $$Var(X)=\mathbb E[(X-\mu)^2]$$
+  
+> **Notação:** $\sigma^2 = Var(X)$ 
+
+> * Se $X$ é uma v.a. discreta assumindo valores em $D$:
+
+> $$Var(X) = \sum_{x\in D} (x - \mu)^2 P(X=x)$$
+
+
+## Propriedade Geral da Variância {.build}
+
+**Definição:** $Var(X)=\mathbb E([X-\mathbb E(X)]^{2})$
+
+> Uma forma alternativa de calcular a variância é usando a fórmula:
+>  $$Var(X) = \mathbb E(X^{2}) - [\mathbb E(X)]^{2}$$
+
+> **Demonstração:**
+> $$ \begin{aligned}
+\mathbb E([X-\mathbb E(X)]^{2}) &= \mathbb E([X-\mu]^{2})  \\
+& = \mathbb E(X^{2}-2X\mu+\mu^{2}) = \mathbb E(X^{2}) - 2\mu \mathbb E(X) + \mu^{2} \\
+& = \mathbb E(X^2) - 2\mu\mu + \mu^2 = \mathbb E(X^2)- 2\mu^{2} + \mu^{2} \\
+& = \mathbb E(X^2) - \mu^{2} \\
+& = \mathbb E(X^{2}) - [\mathbb E(X)]^2 
+\end{aligned}
+$$
+
+
+## Exemplo {.build}
+ 
+Encontre $Var(X)$, onde $X$ é uma v.a. tal que:
+
+> $$ X=  \begin{cases} 
+1, & \mbox{com probabilidade } p \\
+0, & \mbox{com probabilidade } 1-p
+\end{cases}$$
+
+> $$
+\begin{aligned}
+\mathbb E(X) &= 1\times p +0\times (1-p) = p \\
+Var(X) &= \mathbb E(X^2) - p^2
+\end{aligned} 
+$$
+
+Como calcular a $\mathbb E(X^2)$?
+ 
+> $$ X^2=  \begin{cases} 
+1^2, & \mbox{com probabilidade } p \\
+0^2, & \mbox{com probabilidade } 1-p
+\end{cases}
+$$
+
+> $$
+\begin{aligned}
+\mathbb E(X^2) &= 1\times p + 0\times (1-p) = p \\
+Var(X) & = p-p^2 = p(1-p)
+\end{aligned} 
+$$
+
+
+## Propriedades da Variância {.build}
+ 
+1. Para qualquer v.a. $X$ e constantes $a$ e $b$:
+ $$Var(aX + b) = a^2Var(X)$$
+
+    Casos particulares:
+    + $Var(X+b) = Var(X)$
+    + $Var(aX) = a^2 Var(X)$
+  
+2. Se $X_1, X_2, \ldots, X_n$ são variáveis aleatórias independentes:
+$$ Var \left(\sum_{i=1}^n X_i \right) = \sum_{i=1}^n Var(X_i)$$ 
+
+
+## Exemplo {.build}
+
+Considere uma urna contendo três bolas vermelhas e cinco pretas. 
+
+> Retire três bolas, sem reposição, e defina a variável aleatória $X$ igual ao número de bolas pretas. 
+
+> Obtenha a distribuição de $X$. Calcule a esperança e a variância.
+
+> *Fonte*: Morettin | Bussab, Estatística Básica $5^a$ edição, pág 135.
+
+> Repare que não há reposição: 
+
+> - a primeira extração tem 5 possibilidades em 8 de ser uma bola preta; 
+
+> - a segunda terá 5 em 7 se a primeira for vermelha, ou 4 em 7 se a primeira foi preta, e assim por diante.
+
+
+## Exemplo (continuação) 
+
+Retirar 3 bolas, sem reposição, de uma urna com 3 bolas vermelhas e 5 pretas
+
+<center><img src="figuras/organ.png" width=550></center>
+
+
+## Exemplo (continuação) {.smaller}
+
+A partir do gráfico, podemos construir uma tabela com os eventos do espaço amostral:
+
+Extrações   | Probabilidade | $X=x$ 
+:---------: | ------------- | :---------:
+PPP | $5/8\times 4/7\times3/6 = 5/28$ | 3
+PPV | $5/8\times4/7\times3/6 = 5/28$ | 2
+PVP | $5/8\times3/7\times4/6 = 5/28$ | 2
+VPP | $3/8\times5/7\times4/6 = 5/28$ | 2
+PVV | $5/8\times3/7\times2/6 = 5/56$ | 1
+VPV | $3/8\times5/7\times2/6 = 5/56$ | 1
+VVP | $3/8\times2/7\times5/6 = 5/56$ | 1
+VVV | $3/8\times2/7\times1/6 = 1/56$ | 0
+
+
+## Exemplo (continuação) {.build}
+
+Como $X$ é o número de bolas pretas, temos que:
+
+> Somando as probabilidades dos eventos, encontradas anteriormente, obtemos a função de distribuição de $X$, $p_X(x)$.
+
+> 
+Eventos | $X=x$ | $p_X(x) = P(X=x)$
+------- | ----- | --------
+$\{VVV\}$ | 0 | $0.02$
+$\{VVP\} \cup \{VPV\} \cup \{PVV\}$ | 1 | 0.27
+$\{PPV\} \cup \{PVP\} \cup \{VPP\}$ | 2 | 0.53
+$\{PPP\}$ | 3 | 0.18
+
+
+## Exemplo (continuação) {.build}
+
+Podemos calcular a esperança e a variância de $X$ a partir de sua função de probabilidade:
+
+<font size=4>
+$$ 
+\begin{aligned} 
+\mu &= \mathbb E (X ) =  \sum_{x=0}^3 xp_X (x) \\
+    & = 0 \times 0.02 + 1 \times 0.27 + 2 \times 0.53 + 3 \times 0.18 = 1.87 \\
+    \\
+Var(X) & = \mathbb E[(X-\mu)^2] = \sum_{x=0}^3 (x-\mu)^2 p_X(x) \\
+  & = (0-1.87)^2 \times 0.02 + (1-1.87)^2 \times 0.27  + (2-1.87)^2\times 0.53 + (3-1.87)^2 \times 0.18= 0.51 \\
+  \\
+\mbox{ou} \\
+\\
+Var(X) &=  \mathbb E(X^2) - [\mathbb E(X)]^2 \\
+&=  (0^2 \times 0.02 + 1^2 \times 0.27 + 2^2 \times 0.53 + 3^2 \times 0.18) - (1.87)^2 = 0.51
+\end{aligned} 
+$$
+</font>
+
+
+## Exemplo {.build}
+
+O tempo $T$, em minutos, necessário para um operário processar certa peça é uma v.a. com a seguinte distribuição de probabilidade:
+
+>
+$T$ | 2 | 3 | 4 | 5 | 6 | 7
+--- | :-: | :-: | :-: | :-: | :-: | :-:
+$P(T=t)$ | $0.1$ | $0.1$ | $0.3$ | $0.2$ | $0.2$ | $0.1$
+
+1. Calcule o tempo médio de processamento. 
+
+2. Cada peça processada paga ao operador $\$2.00$ mas, se ele processa a peça em menos de 6 minutos, ganha $\$0.50$ por minuto poupado. Por exemplo, se ele processa a peça em 4 minutos, ganha um bônus de $\$1.00$. Encontre a distribuição, a média e a variância da v.a. $S$: quantia paga por peça.
+
+*Fonte: Morettin & Bussab*, Estatística Básica $5^a$ edição, pág 140.
+
+
+## Exemplo (continuação) {.build}
+
+1. Tempo médio de processamento
+$$ 
+\begin{aligned}
+\mathbb E (T) & = \displaystyle \sum_{t=2}^7 t P(T=t) \\
+& = 2\times 0.1 + 3\times 0.1 + 4\times 0.3 + 5\times 0.2 + 6\times 0.2 + 7\times 0.1 = 4.6
+\end{aligned} 
+$$
+
+2. Podemos trocar os valores na tabela do tempo, pelo total ganho por peça. Note, contudo, que o operário receberá $\$ 2.00$ no evento $\{T=6\} \cup \{T=7\}$, logo somamos suas probabilidades. Seja $S$ a v.a. "ganho final".
+
+$S$ |  $\$4.00$ | $\$3.50$ | $\$3.00$ | $\$2.50$ | $\$2.00$
+--- | :-----: | :----: | :----: | :----: | :----:
+$P(S=s)$ | $0.1$ | $0.1$ | $0.3$ | $0.2$ | $0.3$
+
+
+## Exemplo (continuação) {.build}
+
+Obtemos a média e a variância de $S$ através da definição:
+
+$$
+\begin{aligned}
+\mathbb E (S) &= \displaystyle \sum_{s} s P(S=s) \\
+&= 4\times 0.1 + 3.5\times 0.1 + 3\times 0.3 + 2.5 \times 0.2 + 2\times 0.3 = 2.75 \\
+\\
+\mathbb E (S^2) & = \displaystyle \sum_{s} s^2 P(S=s) \\
+&= 16\times 0.1 + 12.25 \times 0.1 + 9\times 0.3 + 6.25\times 0.2 + 4\times 0.3 = 7.975
+\end{aligned}
+$$
+
+Então, $$\mbox{Var} (S) = 7.975 - (2.75)^2 = 0.4125$$
+
+
+
 ## Leituras
 
-* [OpenIntro](https://www.openintro.org/stat/textbook.php): seção 2.4.
-* [Ross](http://www.sciencedirect.com/science/book/9780123743886): seções 5.1, 5.2, 5.3.
-* Magalhães: seção 3.1.
+* [Ross](http://www.sciencedirect.com/science/book/9780123743886): seções 5.1, 5.2, 5.3. e 5.4.
+* Devore: seções 3.1, 3.2 e 3.3.
 
 
 ##
