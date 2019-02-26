@@ -8,24 +8,22 @@ permalink: /aulas/
 ## Introdução à Probabilidade
 
 * Definição
-* Espaço amostral
-* Eventos
-* Operações com eventos
-* Partições do espaço amostral
+* Espaço amostral e eventos
+* Axiomas e propriedades
+* Técnicas de contagem
 * Probabilidade Condicional
-* Independência de Eventos
+* Independência
 * Teorema de Bayes 
 
 [Parte01](slides/parte01/parte01.html)
 [Parte02](slides/parte02/parte02.html)
 [Parte03](slides/parte03/parte03.html)
 
-
-
 ## Variáveis Aleatórias Discretas
 
-* Distribuições de Probabilidade Discreta
-* Função Distribuição Acumulada (FDA)
+* Variáveis aleatórias
+* Distribuições de probabilidade para variáveis aleatórias discretas
+* Função distribuição acumulada (FDA)
 * Esperança e variância
 * Distribuições discretas: Uniforme, Bernoulli, Binomial, Geométrica, Hipergeométrica, Binomial Negativa e Poisson
 * Aproximação da Binomial pela Poisson
@@ -40,13 +38,26 @@ permalink: /aulas/
 * Função densidade
 * Função de distribuição acumulada
 * Esperança e variância
-* Distribuições contínuas: Uniforme, Exponencial, Normal
+* Distribuições contínuas: Uniforme, Exponencial, Normal, Gama, Beta, t, F e Qui-quadrado.
 * Aproximação da Binomial pela Normal
 
 [Parte07](slides/parte07/parte07.html)
 [Parte13](slides/parte13/parte13.html)
 
-## Distribuição Amostral
+
+## Vetores Aleatórios
+
+* Distribuições de probabilidade conjunta. 
+* Variáveis aleatórias independentes. 
+* Esperança e variância de funções de vetores aleatórios. 
+* Covariância e correlação. 
+* Distribuição de Probabilidade Conjunta de Funções de Vetor Aleatório. 
+* Distribuição de soma de variáveis aleatórias. 
+* Teoremas limites. 
+* Distribuição e esperança condicionais.
+
+## Estimativa Pontual
+
 * População e Amostra
 * Estatística e Parâmetro
 * Distribuições Amostrais
@@ -54,8 +65,8 @@ permalink: /aulas/
 
 [Parte14](slides/parte14/parte14.html)
 
-## Estimação Pontual e Intervalos de Confiança - uma população
-* Estimação Pontual
+
+## Estimação por Intervalos de Confiança - uma população
 * Estimação por intervalo: proporção
 * Estimação por intervalo: média
 
