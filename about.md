@@ -30,4 +30,4 @@ permalink: /about/
 
 ### Horário de atendimento
 
-Segundas e Quintas 18 às 19h - IMECC - sala 123.
+Terça e Quintas 18 às 19h - IMECC - sala 224.
