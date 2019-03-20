@@ -15,7 +15,7 @@ logo: ../logo-imecc.png
  
 > *  Ex: lançamento de dois dados. O interesse pode estar apenas na soma, não nos resultados individuais dos dados.
  
-> *  Quantidades de interesse que são determinadas a partir do resultado de experimento aleatório são denominadas **variáveis aleatórias**.
+> *  Quantidades de interesse resultantes de experimento aleatório são denominadas **variáveis aleatórias**.
 
 > *  Cada resultado possível de uma variável aleatória (v.a.) tem associado uma probabilidade. O conjunto de todos os resultados possíveis e as respectivas probabilidades é denominado **distribuição de probabilidade**.
 
