@@ -495,10 +495,6 @@ Portanto, é mais interessante ao industrial que o comprador A examine mais peç
 
 
 
-
-
-# Distribuição Geométrica
-
 ## Distribuição Geométrica {.build}
 
 Consideremos novamente um experimento aleatório com espaço de resultados $\Omega$ e o evento $A$. 
@@ -683,6 +679,66 @@ Temos que
 > * $P(X=2) =  0.9 \times 0.1 = 0.09$ 
 > * $P(X=7) =  0.9^6 \times 0.1 = 0.053$  
 > * $\mathbb E(X) = 1/0.1=10.$ Neste caso, esperamos que dez doadores passem pelo hospital, em média, para encontrarmos o primeiro com sangue O negativo.
+
+## Distribuição Binomial Negativa
+
+* E se estivermos interessados em saber o "tempo de
+espera" até o $r$-ésimo sucesso?
+
+* Suponha uma sequência de $n$ ensaios independentes de
+Bernoulli com probabilidade de sucesso $p$.
+
+* $X$ o número de ensaios realizados até a ocorrência do $r$-ésimo sucesso. 
+
+* $X$ segue distribuição Binomial Negativa com parâmetros $r$ e $p$.
+
+* $X$ pode ser definida como a soma de $r$ v.a. geométricas independentes com parâmetro $p$.
+
+
+## Distribuição Binomial Negativa
+
+$$\underbrace{\overbrace{FF\ldots F}^{fracassos} S}_{Y_1}\quad \underbrace{\overbrace{FF\ldots F}^{fracassos} S}_{Y_2} \quad \ldots \quad  \underbrace{\overbrace{FF\ldots F}^{fracassos} S}_{Y_r} $$
+
+$Y_i\stackrel{iid}{\sim} G(p)$, $i=1,\ldots,r$
+
+$$X=\sum_{i=1}^rY_i$$
+$X\sim BN(r,p)$
+
+
+## Distribuição Binomial Negativa
+
+Seja $X\sim BN(r,p)$, a função de distribuição de massa é dada por:
+
+$$P(X=x)=\binom{x-1}{r-1}p^r(1-p)^{x-r}$$
+para $x=r, r+1, r+2, \ldots$
+
+
+$$E(X) = \frac{r}{p}$$
+
+$$Var(X)=\frac{r(1-p)}{p^2}$$
+
+## Exemplo {.build}
+
+Para ganhar um jogo de lançamento de dados é necessário obter 3 vezes a face 1. O número de tentativas deve ser 6 e devemos obter a face 1 pela terceira vez na sexta tentativa. Qual a probabilidade de vencer o jogo?
+
+
+$$P(X=x)=\binom{x-1}{r-1}p^r(1-p)^{x-r}$$
+
+$$P(X=6)=\binom{5}{2}(1/6)^3(5/6)^{3}=0.0268$$
+
+## Exemplo {.build}
+
+Uma fábrica produz resistências para chuveiros com uma taxa de defeitos de 2%. Uma inspeção contará o número de peças inspecionadas até encontrar 3 peças com defeito
+Qual a probabilidade de que a décima resistência inspecionada seja a terceira defeituosa?
+
+$X$: número de resistências inspecionadas até encontrar 3 defeituosas.
+
+$X\sim BN(3,0.02)$
+
+$$P(X=10)=\binom{9}{2}0.02^30.98^7 = 0.00025$$
+Espera-se inspecionar quantas resistências até obter a terceira defeituosa?
+
+$$E(X)=3/0.02=150$.
 
 
 
