@@ -703,6 +703,38 @@ Prove!
 
 ## Distribuição Beta
 
+Uma v.a. $X$ tem distribuição Beta com parâmetros $\alpha$ e $\beta$ ($\alpha>0$, $\beta>0$) se sua f.d.p. for dada por:
+
+$$f(x) = \frac{1}{B(\alpha,\beta)}x^{\alpha-1}(1-x)^{\beta-1}\,, \quad 0<x<1$$
+
+sendo
+
+$$B(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$$
+
+Obs: $X\sim Beta(\alpha=1,\beta=1)$, então $X\sim U(0,1)$.
+
+
+## Distribuição Beta
+
+<center><img src="figuras/beta_pdf1.pdf" width=500></center>
+
+
+## Distribuição Beta
+
+<center><img src="figuras/beta_pdf3.pdf" width=500></center>
+
+
+## Distribuição Beta
+
+Momentos:
+
+$$E(X)=\frac{\alpha}{\alpha+\beta}$$
+
+
+$$E(X^k)=\frac{\Gamma(\alpha+\beta)\Gamma(\alpha+k)}{\Gamma(\alpha+\beta+k)\Gamma(\alpha)}$$
+
+
+$$Var(X) = \frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$$
 
 
 
