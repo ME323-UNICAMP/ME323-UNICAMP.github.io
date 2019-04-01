@@ -165,12 +165,6 @@ P(X\geq 1) &=1-P(X<1)=1-P(X=0) \\
 $$
 
 
-# Distribuição Binomial Negativa
-
-Olhar slides Aula 7 da Tatê
-
-
-
 # Aproximação da Binomial pela Poisson
 
 ## Distribuição de Poisson {.build}
