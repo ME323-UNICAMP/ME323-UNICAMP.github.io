@@ -1,6 +1,6 @@
 ---
-title: ME414 - Estatística para Experimentalistas
-subtitle: Parte 13
+title: ME323 - Introdução aos Modelos Probabilísticos
+subtitle: Parte 08
 output:
   ioslides_presentation:
     widescreen: yes
