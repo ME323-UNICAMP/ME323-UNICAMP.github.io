@@ -526,9 +526,7 @@ Então, a probabilidade de $X>14$ é dada por
 $$P(X>14) = \int_{14}^{20}\frac{1}{10}dx =  \frac{(20-14)}{10} = 0.6$$
 
 
-# Distribuição Exponencial
-
-## Exponencial {.build}
+## Distribuição Exponencial {.build}
 
 > *  Dizemos que uma v.a. $X$ possui distribuição exponencial com parâmetro $\lambda$ ($\lambda>0$) se a função de densidade de probabilidade $f_{X}$ é dada por:
 
@@ -669,11 +667,51 @@ $$
 
 </font>
 
+## Distribuição Gama
+
+Uma v.a. contínua $X$ segue a distribuição gama com parâmetros $\alpha$ e $\lambda$ ($\alpha>0$ e $\lambda>0$) se a f.d.p. de $X$ for dada por: 
+
+$$f(x)=\frac{1}{\Gamma(\alpha)}x^{\alpha-1}\lambda^{\alpha}e^{-\lambda x}\,, x\geq0$$
+
+A função gama é definida por: $\Gamma(\alpha)=\int_0^{\infty}x^{\alpha-1}e^{-x}dx$.
+
+Para qualquer $\alpha>1$: $(\alpha-1)\Gamma(\alpha-1)$.
+
+Para qualquer inteiro positivo $n$: $\Gamma(n)=(n-1)!$.
+
+Caso especial: $\alpha=1$, temos $X\sim Exp(\lambda)$.
+
+Quando $\alpha=n$, inteiro, $X$ representa o tempo de espera até que $n$ eventos ocorram.
+
+## Distribuição Gama
+
+<center><img src="figuras/gama_pdf.pdf" width=500></center>
+
+
+## Distribuição Gama
+
+<center><img src="figuras/gama_cdf.pdf" width=500></center>
+
+
+## Distribuição Gama
+
+$E(X)=\frac{\alpha}{\lambda}$
+
+$Var(X)=\frac{\alpha}{\lambda^2}$
+
+Prove!
+
+## Distribuição Beta
+
+
+
 
 ## Leituras
 
+* Devore: capítulo 4.
 * [Ross](http://www.sciencedirect.com/science/article/pii/B9780123743886000065): seções 6.1 e 6.2.
 * Magalhães: capítulo 6.
+
 
 <br /><br />
 

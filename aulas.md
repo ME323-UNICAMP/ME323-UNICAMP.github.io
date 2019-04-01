@@ -42,6 +42,7 @@ permalink: /aulas/
 * Aproximação da Binomial pela Normal
 
 [Parte07](slides/parte07/parte07.html)
+[Parte08](slides/parte08/parte08.html)
 
 
 ## Vetores Aleatórios

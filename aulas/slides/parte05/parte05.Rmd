@@ -688,7 +688,7 @@ Temos que
 
 ## Leituras
 
-* Devore: seções 3.4, 3.5 e 3.6
+* Devore: capítulo 3.
 * [Ross](http://www.sciencedirect.com/science/book/9780123743886): capítulo 5
 * Magalhães: capítulo 3
 

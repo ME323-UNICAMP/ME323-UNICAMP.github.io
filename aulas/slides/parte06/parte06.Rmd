@@ -453,6 +453,7 @@ $$
 
 ## Leituras
 
+* Devore: capítulo 3.
 * [Ross](http://www.sciencedirect.com/science/book/9780123743886): capítulo 5
 * Magalhães: capítulo 3
 * [OpenIntro](https://www.openintro.org/stat/textbook.php): seções 3.3, 3.4, 3.5.2
