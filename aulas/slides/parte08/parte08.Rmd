@@ -1,5 +1,5 @@
 ---
-title: ME313 - Introdução aos Modelos Probabilísticos
+title: ME323 - Introdução aos Modelos Probabilísticos
 subtitle: Parte 08
 output:
   ioslides_presentation:

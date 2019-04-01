@@ -748,9 +748,7 @@ P(X_B &gt; 2 ) &amp;= 1 - {10 \choose 0} \left (1-\frac{1}{5} \right )^{10} - {1
 
 <p>Portanto, é mais interessante ao industrial que o comprador A examine mais peças.</p>
 
-</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Distribuição Geométrica</h2></hgroup><article  id="distribuicao-geometrica">
-
-</article></slide><slide class=""><hgroup><h2>Distribuição Geométrica</h2></hgroup><article  id="distribuicao-geometrica-1" class="build">
+</article></slide><slide class=""><hgroup><h2>Distribuição Geométrica</h2></hgroup><article  id="distribuicao-geometrica" class="build">
 
 <p>Consideremos novamente um experimento aleatório com espaço de resultados \(\Omega\) e o evento \(A\).</p>
 
@@ -771,7 +769,7 @@ P(X=k) &amp;= (1-p)^{k-1} p &amp;&amp; (\mbox{$k-1$ fracassos sucessivos e 1 suc
 \end{aligned}
 \]</p>
 
-</article></slide><slide class=""><hgroup><h2>Distribuição Geométrica</h2></hgroup><article  id="distribuicao-geometrica-2" class="build">
+</article></slide><slide class=""><hgroup><h2>Distribuição Geométrica</h2></hgroup><article  id="distribuicao-geometrica-1" class="build">
 
 <p><strong>Modelo Geral:</strong> Suponha uma sequência de ensaios de Bernoulli independentes com probabilidade de sucesso \(p\).</p>
 
@@ -787,7 +785,7 @@ P(X=k) &amp;= (1-p)^{k-1} p &amp;&amp; (\mbox{$k-1$ fracassos sucessivos e 1 suc
 <p>A esperança e variância de uma v.a. Geométrica são dadas por: \[\mathbb E(X)= \frac{1}{p} \qquad \mbox{e} \qquad Var(X)=\frac{1-p}{p^2}\]</p>
 </blockquote>
 
-</article></slide><slide class=""><hgroup><h2>Distribuição Geométrica</h2></hgroup><article  id="distribuicao-geometrica-3">
+</article></slide><slide class=""><hgroup><h2>Distribuição Geométrica</h2></hgroup><article  id="distribuicao-geometrica-2">
 
 <p>Distribuição de probabilidade de uma \(G(p)\), com \(p=0.3, 0.5\) e \(0.7\).</p>
 
@@ -797,7 +795,7 @@ P(X=k) &amp;= (1-p)^{k-1} p &amp;&amp; (\mbox{$k-1$ fracassos sucessivos e 1 suc
 
 </center>
 
-</article></slide><slide class=""><hgroup><h2>Distribuição Geométrica</h2></hgroup><article  id="distribuicao-geometrica-4" class="build">
+</article></slide><slide class=""><hgroup><h2>Distribuição Geométrica</h2></hgroup><article  id="distribuicao-geometrica-3" class="build">
 
 <p>A função de distribuição acumulada de uma v.a. \(G(p)\) é dada por: \[F(x)=P(X\leq x)=1-(1-p)^x\]</p>
 
@@ -928,6 +926,54 @@ P(X=15) &amp;= (1-p)^{15-1} p \\
 <li>\(P(X=7) = 0.9^6 \times 0.1 = 0.053\)<br/></li>
 <li>\(\mathbb E(X) = 1/0.1=10.\) Neste caso, esperamos que dez doadores passem pelo hospital, em média, para encontrarmos o primeiro com sangue O negativo.</li>
 </ul>
+
+</article></slide><slide class=""><hgroup><h2>Distribuição Binomial Negativa</h2></hgroup><article  id="distribuicao-binomial-negativa">
+
+<ul>
+<li><p>E se estivermos interessados em saber o &quot;tempo de espera&quot; até o \(r\)-ésimo sucesso?</p></li>
+<li><p>Suponha uma sequência de \(n\) ensaios independentes de Bernoulli com probabilidade de sucesso \(p\).</p></li>
+<li><p>\(X\) o número de ensaios realizados até a ocorrência do \(r\)-ésimo sucesso.</p></li>
+<li><p>\(X\) segue distribuição Binomial Negativa com parâmetros \(r\) e \(p\).</p></li>
+<li><p>\(X\) pode ser definida como a soma de \(r\) v.a. geométricas independentes com parâmetro \(p\).</p></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Distribuição Binomial Negativa</h2></hgroup><article  id="distribuicao-binomial-negativa-1">
+
+<p>\[\underbrace{\overbrace{FF\ldots F}^{fracassos} S}_{Y_1}\quad \underbrace{\overbrace{FF\ldots F}^{fracassos} S}_{Y_2} \quad \ldots \quad  \underbrace{\overbrace{FF\ldots F}^{fracassos} S}_{Y_r} \]</p>
+
+<p>\(Y_i\stackrel{iid}{\sim} G(p)\), \(i=1,\ldots,r\)</p>
+
+<p>\[X=\sum_{i=1}^rY_i\] \(X\sim BN(r,p)\)</p>
+
+</article></slide><slide class=""><hgroup><h2>Distribuição Binomial Negativa</h2></hgroup><article  id="distribuicao-binomial-negativa-2">
+
+<p>Seja \(X\sim BN(r,p)\), a função de distribuição de massa é dada por:</p>
+
+<p>\[P(X=x)=\binom{x-1}{r-1}p^r(1-p)^{x-r}\] para \(x=r, r+1, r+2, \ldots\)</p>
+
+<p>\[E(X) = \frac{r}{p}\]</p>
+
+<p>\[Var(X)=\frac{r(1-p)}{p^2}\]</p>
+
+</article></slide><slide class=""><hgroup><h2>Exemplo</h2></hgroup><article  id="exemplo" class="build">
+
+<p>Para ganhar um jogo de lançamento de dados é necessário obter 3 vezes a face 1. O número de tentativas deve ser 6 e devemos obter a face 1 pela terceira vez na sexta tentativa. Qual a probabilidade de vencer o jogo?</p>
+
+<p>\[P(X=x)=\binom{x-1}{r-1}p^r(1-p)^{x-r}\]</p>
+
+<p>\[P(X=6)=\binom{5}{2}(1/6)^3(5/6)^{3}=0.0268\]</p>
+
+</article></slide><slide class=""><hgroup><h2>Exemplo</h2></hgroup><article  id="exemplo-1" class="build">
+
+<p>Uma fábrica produz resistências para chuveiros com uma taxa de defeitos de 2%. Uma inspeção contará o número de peças inspecionadas até encontrar 3 peças com defeito Qual a probabilidade de que a décima resistência inspecionada seja a terceira defeituosa?</p>
+
+<p>\(X\): número de resistências inspecionadas até encontrar 3 defeituosas.</p>
+
+<p>\(X\sim BN(3,0.02)\)</p>
+
+<p>\[P(X=10)=\binom{9}{2}0.02^30.98^7 = 0.00025\] Espera-se inspecionar quantas resistências até obter a terceira defeituosa?</p>
+
+<p>\($E(X)=3/0.02=150\).</p>
 
 </article></slide><slide class=""><hgroup><h2>Leituras</h2></hgroup><article  id="leituras">
 

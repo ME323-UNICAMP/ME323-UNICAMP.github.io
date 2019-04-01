@@ -9,7 +9,7 @@ logo: ../logo-imecc.png
 
 
 
-# Hipergeométrica
+# Variáveis Aleatórias Discretas
 
 ## Distribuição Hipergeométrica {.build}
 
@@ -163,12 +163,6 @@ P(X\geq 1) &=1-P(X<1)=1-P(X=0) \\
 &=1-\frac{\binom{12}{0}\binom{88}{15}}{\binom{100}{15}}=0.8747
 \end{aligned}
 $$
-
-
-# Distribuição Binomial Negativa
-
-Olhar slides Aula 7 da Tatê
-
 
 
 # Aproximação da Binomial pela Poisson
