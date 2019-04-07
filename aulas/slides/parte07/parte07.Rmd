@@ -685,12 +685,12 @@ Quando $\alpha=n$, inteiro, $X$ representa o tempo de espera até que $n$ evento
 
 ## Distribuição Gama
 
-<center><img src="figuras/gama_pdf.pdf" width=500></center>
+<center><img src="figuras/gama_pdf.png" width=500></center>
 
 
 ## Distribuição Gama
 
-<center><img src="figuras/gama_cdf.pdf" width=500></center>
+<center><img src="figuras/gama_cdf.png" width=500></center>
 
 
 ## Distribuição Gama
@@ -716,12 +716,12 @@ Obs: $X\sim Beta(\alpha=1,\beta=1)$, então $X\sim U(0,1)$.
 
 ## Distribuição Beta
 
-<center><img src="figuras/beta_pdf1.pdf" width=500></center>
+<center><img src="figuras/beta_pdf1.png" width=500></center>
 
 
 ## Distribuição Beta
 
-<center><img src="figuras/beta_pdf3.pdf" width=500></center>
+<center><img src="figuras/beta_pdf3.png" width=500></center>
 
 
 ## Distribuição Beta
