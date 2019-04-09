@@ -609,6 +609,25 @@ Se $X$ e $Y$ são v.a.'s independentes, tal que $X \sim N(\mu_x,\sigma_x^2)$ e $
 $$X+Y\sim N(\mu_x+\mu_y,\sigma_x^2+\sigma_y^2)$$
 
 
+## Distribuição Qui-quadrado
+
+Se $Z_1,Z_2,\ldots,Z_k$ são v.a. independentes e identicamente distribuídas (i.i.d.) $N(0,1)$, temos que:
+
+$$Q=\sum_{i=1}^kZ_i^2 \sim \chi_k^2$$
+
+$Q$ é uma v.a. com distribuição Qui-quadrado com $k$ graus de liberdade.
+
+Note que, se $X_1,X_2,\ldots,X_n$ são v.a. i.i.d. $N(\mu,\sigma^2)$, então:
+
+$$Y=\sum_{i=1}^n\left(\frac{X_i-\bar{X}}{\sigma} \right)^2\sim \chi^2_{n-1}$$
+
+## Distribuição Qui-quadrado
+
+Uma v.a. $X$ tem distribuição qui-quadrado com $k$ graus de liberdade se sua f.d.p. é dada por:
+
+$$f(x) = \frac{1}{2^{k/2}\Gamma(k/2)}\exp(-x/2)x^{k/2-1}\,, x\geq0$$
+
+
 ## Leituras
 
 <img src="figuras/paranormal.jpg" width=300 style="float: right">
