@@ -66,6 +66,35 @@ A **função massa de probabilidade marginal de $Y$**, denotada por $p_Y(y)$ é 
 
 $$p_Y(y)=\sum_{x:p(x,y)>0}p(x,y)$$
 
+## Duas variáveis contínuas
+
+A probabilidade de que o valor observado de uma v.a. contínua $X$ fique no conjunto unidimensional $A$ (um intervalo, por exemplo) é obtida ao integrar a f.d.p. $f_X(x)$ sobre o conjunto $A$.
+
+
+A probabilidade de que o par $(X,Y)$ das v.a. contínuas caiam em um conjunto bidimensional $A$ (um retângulo, por exemplo) é obtida ao integrar a chamada **função da densidade conjunta**.
+
+## Função de densidade de probabilidade conjunta
+
+Sejam $X$ e $Y$ v.a. contínuas. Uma f.d.p. conjunta $f_{X,Y}(x,y)$ para essas duas v.a.'s deve satisfazer:
+
+$$f_{X,Y}(x,y)\geq0$$
+
+$$\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}f_{X,Y}(x,y)dxdy=1$$
+
+Em particular, caso $A$ seja o retângulo bidimensional $\{(x,y): a\leq x\leq b,\, c<y\leq d\}$, então
+
+$$P[(X,Y)\in A]=P(a\leq X\leq b,\,c\leq Y\leq d)=\int_a^b\int_c^df_{X,Y}(x,y)dydx$$
+
+## Função de densidade de probabilidade conjunta
+
+$$P[(X,Y)\in A]=P(a\leq X\leq b,\,c\leq Y\leq d)=\int_a^b\int_c^df_{X,Y}(x,y)dydx$$
+
+é o volume sob a superfície de densidade, considerando a região $A$.
+
+
+<center><img src="figuras/surf1.png" width=500></center>
+
+
 
 ## Leituras
 
