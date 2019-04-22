@@ -95,6 +95,37 @@ $$P[(X,Y)\in A]=P(a\leq X\leq b,\,c\leq Y\leq d)=\int_a^b\int_c^df_{X,Y}(x,y)dyd
 <center><img src="figuras/surf1.png" width=500></center>
 
 
+## Distribuição Marginal
+
+As **funções densidade de probabilidade marginal** de $X$ e $Y$, denotadas por $f_X(x)$ e $f_Y(y)$, são dadas por:
+
+$$f_X(x)=\int_{-\infty}^{\infty}f_{X,Y}(x,y)dy\,,\quad -\infty<x<\infty$$
+$$f_Y(y)=\int_{-\infty}^{\infty}f_{X,Y}(x,y)dx\,,\quad -\infty<y<\infty$$
+
+## Variáveis aleatórias independentes
+
+Duas v.a. $X$ e $Y$ são **independentes** se, para cada par de valores $x$ e $y$:
+
+* se $X$ e $Y$ são discretas:
+
+$$P(X=x,Y=y)=P(X=x)P(Y=y)$$
+
+* se $X$ e $Y$ são contínuas:
+
+$$f_{X,Y}(x,y)=f_X(x)f_Y(y)$$
+
+## Mais de duas v.a.'s {.smaller}
+
+Se $X_1,X_2,\ldots,X_n$ são v.a.'s discretas, a função de massa de probabilidade conjunta é:
+
+$$P(X_1=x_1,X_2=x_2,\ldots,X_n=x_n)$$
+
+Se as v.a.'s são contínuas, a f.d.p. conjunta é $f_{X_1,X_2,\ldots,X_n}(x_1,x_2,\ldots,x_n)$ de forma que para qualquer intervalo $[a_1,b_1],\ldots,[a_n,b_n]$:
+
+$$P(a_1\leq X_1\leq b_1,\ldots,a_n\leq X_n\leq b_n)=\int_{a_1}^{b_1}\ldots\int_{a_n}^{b_n}f_{X_1,X_2,\ldots,X_n}(x_1,x_2,\ldots,x_n)dx_n\ldots dx_1$$
+
+
+
 
 ## Leituras
 
