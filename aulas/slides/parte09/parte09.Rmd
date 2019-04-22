@@ -124,6 +124,22 @@ Se as v.a.'s são contínuas, a f.d.p. conjunta é $f_{X_1,X_2,\ldots,X_n}(x_1,x
 
 $$P(a_1\leq X_1\leq b_1,\ldots,a_n\leq X_n\leq b_n)=\int_{a_1}^{b_1}\ldots\int_{a_n}^{b_n}f_{X_1,X_2,\ldots,X_n}(x_1,x_2,\ldots,x_n)dx_n\ldots dx_1$$
 
+## Independência
+
+As v.a.'s $X_1,X_2,\ldots,X_n$ são ditas **independentes** se para cada subconjunto $X_{i_1},X_{i_2},\ldots,X_{i_k}$ das variáveis (cada par, cada trip, etc...) a f.m.p. ou f.d.p. conjuntas do subconjunto for igual ao produto das f.d.p. ou f.m.p. marginais.
+
+
+## Distribuições condicionais
+
+Sejam $X$ e $Y$ duas v.a. contínuas com f.d.p. conjunta $f_{X,Y}(x,y)$ e f.d.p. marginal de $X$ $f_X(x)$. Então, para qualquer valor $X$ de $x$ para o qual $f_X(x)>0$, a **função densidade de probabilidade condicional de $Y$ dado que $X=x$** é:
+
+$$f_{X\mid Y}(y\mid x)=\frac{f_{X,Y}(x,y)}{f_X(x)}\quad -\infty < y < \infty$$
+
+Se $X$ e $Y$ forem discretas, substituir as f.d.p. por f.m.p. nesta definição fornecerá a **função massa de probabilidade condicional de $Y$ quando $X=x$**.
+
+
+
+
 
 
 

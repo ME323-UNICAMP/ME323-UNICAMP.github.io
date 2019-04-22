@@ -56,6 +56,7 @@ permalink: /aulas/
 * Teoremas limites. 
 * Distribuição e esperança condicionais.
 
+[Parte09](slides/parte09/parte09.html)
 
 ## Noções de Inferência Estatística
 
