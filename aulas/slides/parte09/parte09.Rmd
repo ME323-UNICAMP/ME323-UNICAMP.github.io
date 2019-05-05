@@ -138,7 +138,95 @@ $$f_{X\mid Y}(y\mid x)=\frac{f_{X,Y}(x,y)}{f_X(x)}\quad -\infty < y < \infty$$
 Se $X$ e $Y$ forem discretas, substituir as f.d.p. por f.m.p. nesta definição fornecerá a **função massa de probabilidade condicional de $Y$ quando $X=x$**.
 
 
+## Exemplo {.build}
 
+Cada cliente em uma loja deve escolher apenas entre 3 formas de pagamento disponíveis: dinheiro, crédito ou débito. Consideremos o experimento aleatório observar a escolha do cliente na forma de pagamento. Assumiremos que os experimentos são independentes. 
+
+Sejam $p_1$, $p_2$ e $p_3$ as probabilidades do cliente escolher dinheiro, crédito e débito, respectivamente.
+
+Dentre 10 clientes que chegaram na loja e efetuaram uma compra, qual a probabilidade de que os 5 primeiros paguem com dinheiro, os 3 seguintes com crédito e os 2 últimos com débito?
+
+Resultado experimental igual a: $1111122233$, com probabilidade:
+
+> $p_1^5\times p_2^3\times p_3^2$
+
+
+## Exemplo {.build}
+
+Resultado experimental igual a: $2223311111$, com probabilidade:
+
+> $p_1^5\times p_2^3\times p_3^2$
+
+Resultado experimental igual a: $1122311123$, com probabilidade:
+
+> $p_1^5\times p_2^3\times p_3^2$
+
+Temos muitas combinações possíveis, que resultam em 5 pagando em dinheiro, 3 com crédito e 2 com débito.
+
+
+## Exemplo {.build}
+
+Seja $X_i$ o total de clientes que escolhem a forma de pagamento $i$. 
+
+Se quisermos saber a probabilidade de que exatamente 5 clientes paguem com dinheiro, 3 paguem com crédito e 2 com débito, precisamos somar todas as probabilidades das combinações que resultem nesse total de clientes em cada categoria, que são $\binom{10}{5}\binom{5}{3}\binom{2}{2} =2520$ combinações.
+
+$$P(X_1=5,X_2=3,X_3=2) = \frac{10!}{5!3!2!}p_1^5p_2^3p_3^2$$
+
+
+## Distribuição Multinomial
+
+É uma generalização do experimento de Bernoulli, podendo ter resultados possíveis em uma dentre $r$ categorias.
+
+Cada resultado possível
+
+**Modelo Multinomial**
+
+a) O resultado de cada experimento pode ser classificado em uma de $r$ respostas.
+
+b) A probabilidade da experimento assumir o valor $i$ é $p_{i}$, $i=1, 2, \ldots,r$, com $$\sum_{i=1}^{r}p_{i}=1$$ 
+
+c) As observações são independentes.
+
+
+## Distribuição Multinomial 
+
+Considere repetições de $n$ experimentos independentes e idênticos. Cada experimento pode resultar em uma dentre $r$ categorias de resultados possíveis.
+
+Denotaremos por $X_i$ o total de experimentos que resultaram na categoria $i$. Denotamos por $p_i$ a probabilidade de um experimento resultar na categoria $i$.
+
+$\mathbf{X}=(X_1,X_2,\ldots,X_r)\sim Multinomial (n,p_1,p_2,\ldots,p_r)$ tem distribuição de probabilidade dada por:
+
+$$P(X_1=n_1, X_2=n_2, \ldots , X_r=n_r)=\frac{n!}{n_1! \ldots n_r!}p_1^{n_1}p_2^{n_2} \ldots p_r^{n_r}$$
+
+em que $\displaystyle \sum_{i=1}^{r}n_{i}=n$ e com $\displaystyle \sum_{i=1}^{r}p_{i}=1$.
+
+Note que $r=2$, a distribuição Multinomial se reduz à Binomial.
+
+## Distribuição Multinomial
+
+
+Ex: urna com 3 bolas vermelhas, 4 bolas brancas e 5 bolas azuis.
+
+Retiramos 3 bolas da urna, anotamos a cor sorteada, mas a bola é devolvida à urna depois de cada retirada (sorteio com reposição).
+
+Seja $\mathbf{X}=(X_1,X_2,X_3)$ o vetor aleatório representando o número de bolas vermelhas, brancas e azuis sorteadas, respectivamente.
+
+
+Então $\mathbf{X}\sim Multinomial(3,3/12,4/12,5/12)$.
+
+Qual a probabilidade de obter 3 bolas azuis?
+
+$$P(X_1=0,X_2=0,X_3=0)=(5/12)^3$$
+
+
+## Distribuição Multinomial
+
+Se designarmos a componente $n_1$ como "sucesso" e juntarmos as demais numa mesma que designamos "fracasso", a variável aleatória $n_1$ é o número de sucessos em $n$ ensaios de Bernoulli, ou seja,  $n_1 \sim Bin(n,p_1)$.  
+
+Portanto: $\qquad \mathbb E(n_1)=np_1 \qquad$ e  $\qquad Var(n_1)=np_1(1-p_1)$. 
+
+Analogamente aplicando o mesmo argumento a cada $n_i$ temos: 
+$$\mathbb E(n_i)=np_i \qquad \mbox{e} \qquad Var(n_i)=np_i(1-p_i)$$
 
 
 
