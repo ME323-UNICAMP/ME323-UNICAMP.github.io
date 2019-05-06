@@ -236,7 +236,7 @@
 
 <p>Se \(X\) e \(Y\) forem discretas, substituir as f.d.p. por f.m.p. nesta definição fornecerá a <strong>função massa de probabilidade condicional de \(Y\) quando \(X=x\)</strong>.</p>
 
-</article></slide><slide class=""><hgroup><h2>Exemplo</h2></hgroup><article  id="exemplo-2" class="build">
+</article></slide><slide class=""><hgroup><h2>Exemplo - Vetor Aleatório</h2></hgroup><article  id="exemplo---vetor-aleatorio" class="build">
 
 <p>Cada cliente em uma loja deve escolher apenas entre 3 formas de pagamento disponíveis: dinheiro, crédito ou débito. Consideremos o experimento aleatório observar a escolha do cliente na forma de pagamento. Assumiremos que os experimentos são independentes.</p>
 
@@ -250,7 +250,7 @@
 <p>\(p_1^5\times p_2^3\times p_3^2\)</p>
 </blockquote>
 
-</article></slide><slide class=""><hgroup><h2>Exemplo</h2></hgroup><article  id="exemplo-3" class="build">
+</article></slide><slide class=""><hgroup><h2>Exemplo</h2></hgroup><article  id="exemplo-2" class="build">
 
 <p>Resultado experimental igual a: \(2223311111\), com probabilidade:</p>
 
@@ -266,7 +266,7 @@
 
 <p>Temos muitas combinações possíveis, que resultam em 5 pagando em dinheiro, 3 com crédito e 2 com débito.</p>
 
-</article></slide><slide class=""><hgroup><h2>Exemplo</h2></hgroup><article  id="exemplo-4" class="build">
+</article></slide><slide class=""><hgroup><h2>Exemplo</h2></hgroup><article  id="exemplo-3" class="build">
 
 <p>Seja \(X_i\) o total de clientes que escolhem a forma de pagamento \(i\).</p>
 
@@ -323,6 +323,54 @@
 <p>Portanto: \(\qquad \mathbb E(n_1)=np_1 \qquad\) e \(\qquad Var(n_1)=np_1(1-p_1)\).</p>
 
 <p>Analogamente aplicando o mesmo argumento a cada \(n_i\) temos: \[\mathbb E(n_i)=np_i \qquad \mbox{e} \qquad Var(n_i)=np_i(1-p_i)\]</p>
+
+</article></slide><slide class=""><hgroup><h2>Esperança Condicional</h2></hgroup><article  id="esperanca-condicional" class="smaller">
+
+<p>Vimos que os valores observados de uma v.a. \(X\) podem mudar consideravelmente a distribuição de uma outra v.a. \(Y\), isto é, a distribuição de \(Y\mid X=x\) pode ser diferente da distribuição de \(Y\). Obs: casos em que \(X\) e \(Y\) são independentes, esta mudança não ocorre.</p>
+
+<p>Além de conhecer a distribuição de \(Y\mid X=x\), devemos conhecer também sua esperança.</p>
+
+<ul>
+<li>Caso discreto: Sejam \(X\) e \(Y\) v.a.&#39;s discretas e seja \(x\) um número ral tal que \(p_X(x)&gt;0\).</li>
+</ul>
+
+<p>\[\psi(x)=E(Y\mid X=x) = \sum_y yp_{Y\mid X}(y\mid x)\] Note que \(\psi(.)\) é uma função da v.a. \(X\), portanto temos a v.a.:</p>
+
+<p>\[\psi(X)=E(Y\mid X)\]</p>
+
+</article></slide><slide class=""><hgroup><h2>Esperança Condicional</h2></hgroup><article  id="esperanca-condicional-1">
+
+<p>Exemplo: Suponha uma sequência de \(n\) ensaios de Bernoulli independentes com probabilidades de sucesso \(p\)</p>
+
+<ul>
+<li>Sejam X e Y os números de sucessos e fracassos, respectivamente</li>
+<li>A distribuição de massa conjunta é:</li>
+</ul>
+
+<p>\[p_{X,Y}(k,n-k)=\binom{n}{k}p^k(1-p)^{n-k}\,, k=0,1,\ldots,n\]</p>
+
+<p>Para cada \(k=0,1,2,\ldots,n\):</p>
+
+<p>\[p_{Y\mid X}(l\mid k)=\begin{cases}
+1\quad\mbox{se } l=n-k\\
+0\quad\mbox{caso contrário}
+\end{cases}\]</p>
+
+<p>\[ \psi(k)=E(Y\mid X=k)=n-k\]</p>
+
+<p>Portanto:</p>
+
+<p>\[E(Y\mid X)=n-X\]</p>
+
+</article></slide><slide class=""><hgroup><h2>Esperança Condicional</h2></hgroup><article  id="esperanca-condicional-2">
+
+<ul>
+<li>Caso contínuo: Sejam \(X\) e \(Y\) v.a.&#39;s contínuas e seja \(x\) um número real tal que \(f_X(x)&gt;0\). A esperança condicional de \(Y\) dados \(X=x\) e dada por:</li>
+</ul>
+
+<p>\[\psi(x)=E(Y\mid X=x)=\int_{-\infty}^{\infty}yf_{Y\mid X}(y\mid x)dy\] Assim, como no caso discreto, \(\psi(.)\) é uma função da v.a. X, portanto é também uma v.a.:</p>
+
+<p>\[\psi(X) = E(Y \mid X)\]</p>
 
 </article></slide><slide class=""><hgroup><h2>Leituras</h2></hgroup><article  id="leituras">
 

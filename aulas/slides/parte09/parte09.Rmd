@@ -138,7 +138,7 @@ $$f_{X\mid Y}(y\mid x)=\frac{f_{X,Y}(x,y)}{f_X(x)}\quad -\infty < y < \infty$$
 Se $X$ e $Y$ forem discretas, substituir as f.d.p. por f.m.p. nesta definição fornecerá a **função massa de probabilidade condicional de $Y$ quando $X=x$**.
 
 
-## Exemplo {.build}
+## Exemplo - Vetor Aleatório {.build}
 
 Cada cliente em uma loja deve escolher apenas entre 3 formas de pagamento disponíveis: dinheiro, crédito ou débito. Consideremos o experimento aleatório observar a escolha do cliente na forma de pagamento. Assumiremos que os experimentos são independentes. 
 
@@ -228,6 +228,51 @@ Portanto: $\qquad \mathbb E(n_1)=np_1 \qquad$ e  $\qquad Var(n_1)=np_1(1-p_1)$.
 Analogamente aplicando o mesmo argumento a cada $n_i$ temos: 
 $$\mathbb E(n_i)=np_i \qquad \mbox{e} \qquad Var(n_i)=np_i(1-p_i)$$
 
+## Esperança Condicional {.smaller}
+
+Vimos que os valores observados de uma v.a. $X$ podem mudar consideravelmente a distribuição de uma outra v.a. $Y$, isto é, a distribuição de $Y\mid X=x$ pode ser diferente da distribuição de $Y$. Obs: casos em que $X$ e $Y$ são independentes, esta mudança não ocorre.
+
+Além de conhecer a distribuição de $Y\mid X=x$, devemos conhecer também sua esperança.
+
+* Caso discreto: Sejam $X$ e $Y$ v.a.'s discretas e seja $x$ um número ral tal que $p_X(x)>0$.
+
+$$\psi(x)=E(Y\mid X=x) = \sum_y yp_{Y\mid X}(y\mid x)$$
+Note que $\psi(.)$ é uma função da v.a. $X$, portanto temos a v.a.:
+
+$$\psi(X)=E(Y\mid X)$$
+
+
+## Esperança Condicional
+
+Exemplo: Suponha uma sequência de $n$ ensaios de Bernoulli independentes com probabilidades de sucesso $p$
+
+*   Sejam X e Y os números de sucessos e fracassos, respectivamente
+*  A distribuição de massa conjunta é:
+
+$$p_{X,Y}(k,n-k)=\binom{n}{k}p^k(1-p)^{n-k}\,, k=0,1,\ldots,n$$
+
+Para cada $k=0,1,2,\ldots,n$:
+
+$$p_{Y\mid X}(l\mid k)=\begin{cases}
+1\quad\mbox{se } l=n-k\\
+0\quad\mbox{caso contrário}
+\end{cases}$$
+
+$$ \psi(k)=E(Y\mid X=k)=n-k$$
+
+Portanto:
+
+$$E(Y\mid X)=n-X$$
+
+## Esperança Condicional
+
+* Caso contínuo: Sejam $X$ e $Y$ v.a.'s contínuas e seja $x$ um número real tal que $f_X(x)>0$. A esperança condicional de $Y$ dados $X=x$ 
+e dada por:
+
+$$\psi(x)=E(Y\mid X=x)=\int_{-\infty}^{\infty}yf_{Y\mid X}(y\mid x)dy$$
+Assim, como no caso discreto, $\psi(.)$ é uma função da v.a. X, portanto é também uma v.a.:
+
+$$\psi(X) = E(Y \mid X)$$
 
 
 
