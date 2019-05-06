@@ -133,7 +133,7 @@ As v.a.'s $X_1,X_2,\ldots,X_n$ são ditas **independentes** se para cada subconj
 
 Sejam $X$ e $Y$ duas v.a. contínuas com f.d.p. conjunta $f_{X,Y}(x,y)$ e f.d.p. marginal de $X$ $f_X(x)$. Então, para qualquer valor $X$ de $x$ para o qual $f_X(x)>0$, a **função densidade de probabilidade condicional de $Y$ dado que $X=x$** é:
 
-$$f_{X\mid Y}(y\mid x)=\frac{f_{X,Y}(x,y)}{f_X(x)}\quad -\infty < y < \infty$$
+$$f_{Y\mid X}(y\mid x)=\frac{f_{X,Y}(x,y)}{f_X(x)}\quad -\infty < y < \infty$$
 
 Se $X$ e $Y$ forem discretas, substituir as f.d.p. por f.m.p. nesta definição fornecerá a **função massa de probabilidade condicional de $Y$ quando $X=x$**.
 
@@ -275,6 +275,50 @@ Assim, como no caso discreto, $\psi(.)$ é uma função da v.a. X, portanto é t
 $$\psi(X) = E(Y \mid X)$$
 
 
+## Exemplo - Normal Bivariada
+
+
+Seja $(X,Y)$ um vetor aleatório que segue a distribuição normal bivariada:
+
+$$f_{X,Y}(x,y)=\frac{1}{2\pi \sqrt{1-\rho^2}}\exp\left[-\frac{1}{2(1-\rho^2)(x^2-2\rho xy+y^2)}\right]$$
+em que $\rho\in (-1,1)$.
+
+
+<center><img src="figuras/biv_3D.png" width=350></center>
+
+
+## Exemplo - Normal Bivariada
+
+As marginais de $X$ e $Y$ são normais (confira!).
+
+$$f_{Y\mid X}(y\mid x)=\frac{f_{X,Y}(x,y)}{f_X(x)}\quad -\infty < y < \infty$$
+
+$$f_{Y\mid X}(y\mid x) = \frac{1}{\sqrt{2\pi(1-\rho^2)}}\exp\left[ -\frac{(y-\rho x)^2}{1(1-\rho^2)}\right]$$
+$$Y\mid X=x\sim N(\rho x, (1-\rho^2))$$
+
+$$\psi(x)=E(Y\mid X=x)=\rho x$$
+
+$$\psi(X)=E(Y\mid X)=\rho X$$
+
+
+Veja que à medida que a correlação $\rho$ aumenta, as variáveis $X$ e $E(Y\mid X)$ se aproximam.
+
+## Propriedades
+
+
+Sejam $X$ e $Y$ v.a.'s e $g$ uma função real contínua. Então:
+
+$$E(Y)=E[E(Y\mid X)]$$
+
+$$E[Y g(X)]=E[E(Y\mid X)g(X)]$$
+
+* Se $X$ é uma v.a. discreta:
+
+$$E(Y)=\sum_x E(Y\mid X=x)P(X=x)$$
+
+* Se $X$ é uma v.a. contínua:
+
+$$E(Y)=\int_{-\infty}^{\infty}E(Y\mid X=x)f_X(x)dx$$
 
 ## Leituras
 
