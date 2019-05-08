@@ -280,7 +280,7 @@ $$\psi(X) = E(Y \mid X)$$
 
 Seja $(X,Y)$ um vetor aleatório que segue a distribuição normal bivariada:
 
-$$f_{X,Y}(x,y)=\frac{1}{2\pi \sqrt{1-\rho^2}}\exp\left[-\frac{1}{2(1-\rho^2)(x^2-2\rho xy+y^2)}\right]$$
+$$f_{X,Y}(x,y)=\frac{1}{2\pi \sqrt{1-\rho^2}}\exp\left[-\frac{x^2-2\rho xy+y^2}{2(1-\rho^2)}\right]$$
 em que $\rho\in (-1,1)$.
 
 
