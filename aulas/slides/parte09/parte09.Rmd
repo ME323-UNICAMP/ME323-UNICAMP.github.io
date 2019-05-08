@@ -216,7 +216,7 @@ Então $\mathbf{X}\sim Multinomial(3,3/12,4/12,5/12)$.
 
 Qual a probabilidade de obter 3 bolas azuis?
 
-$$P(X_1=0,X_2=0,X_3=0)=(5/12)^3$$
+$$P(X_1=0,X_2=0,X_3=3)=(5/12)^3$$
 
 
 ## Distribuição Multinomial
@@ -280,7 +280,7 @@ $$\psi(X) = E(Y \mid X)$$
 
 Seja $(X,Y)$ um vetor aleatório que segue a distribuição normal bivariada:
 
-$$f_{X,Y}(x,y)=\frac{1}{2\pi \sqrt{1-\rho^2}}\exp\left[-\frac{1}{2(1-\rho^2)(x^2-2\rho xy+y^2)}\right]$$
+$$f_{X,Y}(x,y)=\frac{1}{2\pi \sqrt{1-\rho^2}}\exp\left[-\frac{(x^2-2\rho xy+y^2)}{2(1-\rho^2)}\right]$$
 em que $\rho\in (-1,1)$.
 
 
@@ -319,6 +319,56 @@ $$E(Y)=\sum_x E(Y\mid X=x)P(X=x)$$
 * Se $X$ é uma v.a. contínua:
 
 $$E(Y)=\int_{-\infty}^{\infty}E(Y\mid X=x)f_X(x)dx$$
+
+## Variância Condicional
+
+A medida de incerteza acerca da variável $X$ para um valor específico (ou conhecido) de $Y$ é chamada **variância condicional**, denotada por $V(X|Y=y)$. Ela é definida por:
+
+$$
+\begin{aligned}
+V(X|Y=y) & =  E([X-E(X|Y=y)]^2|Y=y) \\
+& =  E(X^2|Y=y) - E^2(X|Y=y)
+\end{aligned}
+$$
+
+As principais propriedades da Variância Condicional são:
+
+$$
+\begin{aligned}
+V(X) & = E[V(X|Y)] + V[E(X|Y)] \\
+V[E(X|Y)] & \leq V(X)
+\end{aligned}
+$$
+
+Se $X$ e $Y$ forem independentes, então:
+
+$$V[E(X|Y)] = V(X)$$
+
+## Exemplo - Variância Condicional
+
+A densidade conjunta de $X$ e $Y$ é:
+$$ f(x,y) = \frac{e^{-x/y}e^{-y}}{y}, 0 < x < \infty, 0<y<\infty$$
+
+Encontrem $E(X|Y)$, $E(X)$, $V(X|Y)$ e $V(X)$.
+
+**Solução**:
+
+1. Encontre $f_{X|Y}(x|y)$
+2. Encontre $E(X|Y)$
+3. Encontre $V(X|Y)$
+4. Encontre $E(X)$
+5. Encontre $V(X)$
+
+## Exemplo - Esperança e Variância Condicionais
+<center><img src="figuras/conjuntaDiscreta.png" width=500></center>
+
+Encontrem:
+
+- Distribuição condicional de $Y|X$;
+- $E(Y|X=x)$ e a sua distribuição;
+- $E(Y)$ pela distribuição marginal e pela condicional;
+- $V(Y|X=x)$ e sua distribuição;
+- $V(Y)$ diretamente e condicionando em $X$.
 
 ## Leituras
 
