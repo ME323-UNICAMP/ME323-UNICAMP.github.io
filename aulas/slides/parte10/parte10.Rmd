@@ -1,6 +1,6 @@
 ---
 title: ME323 - Introdução aos Modelos Probabilísticos
-subtitle: Parte 09
+subtitle: Parte 10
 output:
   ioslides_presentation:
     widescreen: yes

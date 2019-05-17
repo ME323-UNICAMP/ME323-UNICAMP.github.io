@@ -60,6 +60,12 @@ permalink: /aulas/
 
 ## Noções de Inferência Estatística
 
+* Estimação Pontual
+* Intervalos de Confiança
+* Testes de Hipóteses
+
+[Parte10](slides/parte10/parte10.html)
+
 
 ## Introdução aos Processos Estocásticos
 
