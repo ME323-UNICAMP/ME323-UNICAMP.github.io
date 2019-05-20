@@ -65,6 +65,7 @@ permalink: /aulas/
 * Testes de Hipóteses
 
 [Parte10](slides/parte10/parte10.html)
+[Parte11](slides/parte11/parte11.html)
 
 
 ## Introdução aos Processos Estocásticos
