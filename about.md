@@ -13,7 +13,7 @@ permalink: /about/
 ### ME323 - B
 
 * Professor: [Samara Flamini Kiihl](http://www.ime.unicamp.br/~samara/)
-* Horário das aulas: Segunas 21 às 23h PB13 e Quartas 19 às 21h - CB16
+* Horário das aulas: Segundas 21 às 23h PB13 e Quartas 19 às 21h - CB16
 
 
 ### ME323 - C
