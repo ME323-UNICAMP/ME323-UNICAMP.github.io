@@ -67,6 +67,7 @@ permalink: /aulas/
 [Parte10](slides/parte10/parte10.html)
 [Parte11](slides/parte11/parte11.html)
 [Parte12](slides/parte12/parte12.html)
+[Parte13](slides/parte13/parte13.html)
 
 ## Introdução aos Processos Estocásticos
 
