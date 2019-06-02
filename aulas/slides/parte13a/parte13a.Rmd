@@ -1,5 +1,5 @@
 ---
-title: ME414 - Estatística para Experimentalistas
+title: ME323 - Introdução aos Modelos Probabilísticos
 subtitle: Uma senhora toma chá, mas eu tomo Coca-Cola! 
 output:
   ioslides_presentation:
