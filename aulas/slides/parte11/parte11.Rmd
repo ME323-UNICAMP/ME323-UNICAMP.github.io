@@ -704,7 +704,7 @@ Note que a prática de obter amostras pequenas para examinar $p$, e aí determin
 
 <img src="figuras/esquilo.png" width=350 style="float: right; margin-left:50px">
 
-
+* Devore: capítulo 7.
 * [Ross](http://www.sciencedirect.com/science/article/pii/B9780123743886000089): capítulo 8. 
 * [OpenIntro](https://drive.google.com/file/d/0B-DHaDEbiOGkY1FCdEJFNGV1Ym8/view): seção 4.2.
 * Magalhães: seção 7.4.

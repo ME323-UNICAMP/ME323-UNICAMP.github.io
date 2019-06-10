@@ -475,6 +475,7 @@ $$P\left( X \leq 50 \right) = P\left(Z \leq \frac{50-40}{\sqrt{24}}\right) \appr
 
 ## Leituras
 
+* Devore: capítulo 5.
 * [Ross](http://www.sciencedirect.com/science/article/pii/B9780123743886000077): capítulo 7. 
 * [OpenIntro](https://www.openintro.org/stat/textbook.php): seção 4.1.
 * Magalhães: capítulo 7.

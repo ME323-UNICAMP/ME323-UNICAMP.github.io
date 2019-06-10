@@ -667,6 +667,7 @@ Como $z_{obs}=-1.5 > -1.645$, então não rejeitamos $H_0$.
 
 ## Leituras
 
+* Devore: capítulo 8.
 * [Ross](http://www.sciencedirect.com/science/article/pii/B9780123743886000090): capítulo 9. 
 * [OpenIntro](https://www.openintro.org/stat/textbook.php): seção 5.1.
 * Magalhães: capítulo 8.

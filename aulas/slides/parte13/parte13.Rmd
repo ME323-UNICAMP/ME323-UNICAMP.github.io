@@ -704,6 +704,7 @@ text(3.5, yMax / 2, labels= paste0("valor-de-p = ", round(valorpn,5)),
 
 ## Leituras
 
+* Devore: capítulo 8.
 * [Ross](http://www.sciencedirect.com/science/article/pii/B9780123743886000090): capítulo 9. 
 * [OpenIntro](https://www.openintro.org/stat/textbook.php): seções 4.3 e 6.1.
 * Magalhães: capítulo 8.

@@ -608,6 +608,7 @@ $$n=\left(\frac{z_{\alpha/2}}{m}\right)^2 \sigma^2$$
 </center>
 
 
+* Devore: capítulo 7.
 * [Ross](http://www.sciencedirect.com/science/article/pii/B9780123743886000089): capítulo 8. 
 * [OpenIntro](https://www.openintro.org/stat/textbook.php): seção 4.2.
 * Magalhães: capítulo 7.
