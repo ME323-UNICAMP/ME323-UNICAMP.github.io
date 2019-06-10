@@ -82,20 +82,20 @@ Para **um outro astrólogo**, foram dados:
 > * Para cada situação, há uma probabilidade associada.   Portanto temos um evento aleatório.
 
 
-## Exemplo: Mapa Astral {.build}
+## Exemplo: Mapa Astral 
 
 <img src="figuras/mapa.png" width=300 style="float: right; margin-left:30px">
 
 Como definir a variável aleatória? 
 
-> * $X_i$: astrólogo associa corretamente um questionário ao mapa astral $i$, ou seja,
+* $X_i$: astrólogo associa corretamente um questionário ao mapa astral $i$, ou seja,
 $$X_i\sim \mbox{Bernoulli}(p)$$  
 
-> * Podemos pensar em $p$ como a proporção de acerto na população de astrólogos.  
+* Podemos pensar em $p$ como a proporção de acerto na população de astrólogos.  
 
-> * Se astrólogos não têm a capacidade de predição, $p = 1/3$.  
+* Se astrólogos não têm a capacidade de predição, $p = 1/3$.  
 
-> * Astrólogos alegam que são capazes: $p>1/3$.  
+* Astrólogos alegam que são capazes: $p>1/3$.  
 
 * Como usar dados para testar estes dois cenários?  
 
@@ -134,7 +134,7 @@ $$
 > No experimento com os 28 astrólogos, observar uma proporção alta de acertos pode ser uma evidência contra a hipótese de que $p=1/3$.   
 
 
-## Passos de um teste de hipótese {.build}
+## Passos de um teste de hipótese 
  
 * **Passo 1: Suposições** 
 
@@ -144,7 +144,8 @@ $$
 
   O teste de hipótese tem sempre duas hipóteses sobre o parâmetro populacional de   interesse.   As hipóteses devem ser definidas **antes** de se realizar o experimento e coletar dados. 
 
-* **Hipótese Nula ($H_0$):** afirma que o parâmetro populacional assume um dado valor. <br />
+* **Hipótese Nula ($H_0$):** afirma que o parâmetro populacional assume um dado valor. 
+
 * **Hipótese Alternativa ($H_A$):** afirma que o parâmetro populacional assume outros valores, diferente do valor descrito na $H_0$.  
 
 
@@ -420,20 +421,20 @@ $$Z=\frac{\widehat p-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} \overset{H_0}{\sim} N(0,1
 **Condição:** $np_0 ≥ 10$ e $n(1−p_0) ≥ 10$ para aproximação normal
 
 
-## Resumo: Teste de Hipótese para uma proporção {.build}
+## Resumo: Teste de Hipótese para uma proporção 
 
 **valor-de-p** 
 
-* $H_A: p \neq p_0$  (bilateral): valor-de-p=$P(|Z| ≥|z_{obs}|)$ <br />
-* $H_A: p < p_0$ (unilateral à esquerda): valor-de-p=$P(Z \leq z_{obs})$ <br />
+* $H_A: p \neq p_0$  (bilateral): valor-de-p=$P(|Z| ≥|z_{obs}|)$
+* $H_A: p < p_0$ (unilateral à esquerda): valor-de-p=$P(Z \leq z_{obs})$ 
 * $H_A: p > p_0$ (unilateral à direita): valor-de-p=$P(Z \geq z_{obs})$ 
 
-<br />
+
 **Conclusão**
 
 Para um nível de significância $\alpha$:
 
-> * Se valor-de-p $\leq \alpha$: rejeitamos $H_0$ <br />
+> * Se valor-de-p $\leq \alpha$: rejeitamos $H_0$ 
 > * Se valor-de-p > $\alpha$: não rejeitamos $H_0$
 
 
@@ -543,7 +544,7 @@ text(xmax1, yMax / 2, labels= valorp,
 ```
 </center>
 
-<br />
+
 **Conclusão**: Para $\alpha=0.05$, como o valor-de-p é maior que 0.05, não temos evidências nos dados para rejeitar a hipótese de que $p=0.20$.
 
 
@@ -571,13 +572,13 @@ Algumas pessoas afirmam que conseguem distinguir o sabor da coca-cola normal da 
 
 > * Cada tentativa, $X_i$, é uma Bernoulli$(p)$, em que $p$ é a probabilidade de acerto.  
 
-> * Estamos interessados no total de acertos em 20 tentativas: <br /> $T=\sum_{i=1}^{20}X_i\sim\mbox{Bin}(20, p)$
+> * Estamos interessados no total de acertos em 20 tentativas:  $T=\sum_{i=1}^{20}X_i\sim\mbox{Bin}(20, p)$
 
 > * Podemos usar a aproximação pela Normal caso as condições sejam satisfeitas.
 
 > **Hipóteses:**  
 
-> * $H_0: p=1/2$ (a pessoa não consegue diferenciar as duas bebidas) <br />
+> * $H_0: p=1/2$ (a pessoa não consegue diferenciar as duas bebidas) 
 > * $H_A: p>1/2$. 
 
 
@@ -613,7 +614,6 @@ valorpn <- pnorm(zobs,lower.tail=FALSE)
 dec <- ifelse(valorp < alpha,"rejeitar","não rejeitar")
 ```
 
-<br />
 **Resultado do experimento:**
 
 > Seja $t_{obs}=`r acertos`$ o número de acertos.
